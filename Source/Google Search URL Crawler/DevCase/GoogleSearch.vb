@@ -133,8 +133,6 @@ Namespace DevCase.ThirdParty.Google.Search
 
         End Function
 
-#If Not NET40 Then
-
         ''' ----------------------------------------------------------------------------------------------------
         ''' <summary>
         ''' Asynchronously searches the World Wide Web using <c>Google Search</c> service with the specified search options.
@@ -177,8 +175,6 @@ Namespace DevCase.ThirdParty.Google.Search
             End Using
 
         End Function
-
-#End If
 
         ''' ----------------------------------------------------------------------------------------------------
         ''' <summary>
@@ -281,8 +277,6 @@ Namespace DevCase.ThirdParty.Google.Search
 
         End Function
 
-#If Not NET40 Then
-
         ''' ----------------------------------------------------------------------------------------------------
         ''' <summary>
         ''' Asynchronously searches the World Wide Web using <c>Google Search</c> service with the specified search options.
@@ -383,8 +377,6 @@ Namespace DevCase.ThirdParty.Google.Search
             Return results
 
         End Function
-
-#End If
 
 #End Region
 
