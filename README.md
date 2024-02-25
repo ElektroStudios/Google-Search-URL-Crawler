@@ -26,7 +26,7 @@ winforms
 
 # ‼️ Limitations
 
-This software makes free usage of Google's search engine via html scraping techniques, it does not use specialized (Google) APIs, so the program is limited to send a small amount of queries per hour until Google start denying any new requests. Blame on Google policy, not this program.
+This software makes free usage of Google's search engine via html scraping techniques, it does not use specialized (Google) APIs, so this program may stop working properly if Google changes something, also, this program is limited to send a small amount of queries per hour until Google start denying any new requests. Blame on Google policy, not this program.
 
 ## 🖼️ Screenshots
 
