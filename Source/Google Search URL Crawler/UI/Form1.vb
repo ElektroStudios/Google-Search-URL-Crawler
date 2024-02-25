@@ -3,6 +3,7 @@
 
 Imports System.IO
 Imports System.Text
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar
 
 Imports DevCase.Core.NET
 Imports DevCase.Core.Shell.Tools
@@ -145,7 +146,7 @@ Friend NotInheritable Class Form1
     Private Async Sub ButtonSearch_Click(sender As Object, e As EventArgs) Handles ButtonSearch.Click
 
         If String.IsNullOrWhiteSpace(Me.searchOptions.SearchTerm) Then
-            MessageBox.Show(Me, "Search Term can't be empty.", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show(Me, "Search Terms value can't be empty.", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
             Exit Sub
         End If
 
@@ -157,7 +158,10 @@ Friend NotInheritable Class Form1
         Me.CircularProgressBar1.Show()
 
         Try
-            Me.searchResults = Await GoogleSearch.GetSearchResultAsync(Me.searchOptions)
+            Dim statuslabel As ToolStripStatusLabel = Me.ToolStripStatusLabel1
+            Me.LabelResults.Text = "..."
+            Me.searchResults = Await GoogleSearch.GetSearchResultAsync(Me.searchOptions, statuslabel)
+            statuslabel.Text = $"Operation Completed."
 
         Catch ex As Exception
             MessageBox.Show(Me, ex.Message, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -209,6 +213,31 @@ Friend NotInheritable Class Form1
         Dim rowsCount As Integer = DirectCast(sender, DataGridView).Rows.Count
         Me.ClearResultsToolStripMenuItem.Enabled = (rowsCount <> 0)
         Me.ExportResultsToolStripMenuItem.Enabled = (rowsCount <> 0)
+    End Sub
+
+    ''' ----------------------------------------------------------------------------------------------------
+    ''' <summary>
+    ''' Handles the <see cref="DataGridView.SelectionChanged"/> event of the <see cref="Form1.DataGridViewSearchResults"/> control.
+    ''' </summary>
+    ''' ----------------------------------------------------------------------------------------------------
+    ''' <param name="sender">
+    ''' The source of the event.
+    ''' </param>
+    ''' 
+    ''' <param name="e">
+    ''' The <see cref="EventArgs"/> instance containing the event data.
+    ''' </param>
+    ''' ----------------------------------------------------------------------------------------------------
+    Private Sub DataGridViewSearchResults_SelectionChangedk(sender As Object, e As EventArgs) _
+        Handles DataGridViewSearchResults.SelectionChanged
+
+        Dim dgv As DataGridView = DirectCast(sender, DataGridView)
+        If dgv.SelectedCells.Count > 0 Then
+            Dim selectedRow As DataGridViewRow = dgv.Rows(dgv.SelectedCells(0).RowIndex)
+            Dim thirdColumnText As String = selectedRow.Cells(2).Value?.ToString()
+            Me.TextBoxQuery.Text = thirdColumnText
+        End If
+
     End Sub
 
     ''' ----------------------------------------------------------------------------------------------------

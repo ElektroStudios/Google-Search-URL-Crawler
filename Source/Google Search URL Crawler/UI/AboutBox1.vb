@@ -23,4 +23,15 @@
         Me.Close()
     End Sub
 
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+
+        Dim url As String = "https://github.com/ElektroStudios/Google-Search-URL-Crawler"
+        Using p As New Process
+            p.StartInfo.FileName = url
+            p.StartInfo.UseShellExecute = True
+
+            p.Start()
+        End Using
+
+    End Sub
 End Class

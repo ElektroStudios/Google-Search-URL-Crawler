@@ -196,7 +196,7 @@ Namespace DevCase.ThirdParty.Google.Search
         ''' </returns>
         ''' ----------------------------------------------------------------------------------------------------
         Public Function ToStringCsv() As String
-            Return $"{Me.Title}; {Me.Url}; {Me.Description}"
+            Return $"{Me.Title.Replace(";"c, ",")}; {Me.Url.ToString().Replace(";"c, "%3B")}; {Me.Description.Replace(";"c, ",")}"
         End Function
 
 #End Region

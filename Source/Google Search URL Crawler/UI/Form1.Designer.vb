@@ -35,6 +35,8 @@ Partial Class Form1
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PropertyGridSearchOptions = New System.Windows.Forms.PropertyGrid()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.CircularProgressBar1 = New CircularProgressBar.CircularProgressBar()
         Me.LabelResults = New System.Windows.Forms.Label()
         Me.TextBoxQuery = New System.Windows.Forms.TextBox()
@@ -44,11 +46,12 @@ Partial Class Form1
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
+        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'ButtonSearch
         '
-        Me.ButtonSearch.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ButtonSearch.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.ButtonSearch.Location = New System.Drawing.Point(12, 406)
         Me.ButtonSearch.Name = "ButtonSearch"
         Me.ButtonSearch.Size = New System.Drawing.Size(75, 23)
@@ -98,7 +101,7 @@ Partial Class Form1
         '
         Me.ClearResultsToolStripMenuItem.Enabled = False
         Me.ClearResultsToolStripMenuItem.Name = "ClearResultsToolStripMenuItem"
-        Me.ClearResultsToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.ClearResultsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ClearResultsToolStripMenuItem.Text = "Clear Results"
         '
         'ExportResultsToolStripMenuItem
@@ -106,25 +109,25 @@ Partial Class Form1
         Me.ExportResultsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PlainTextToolStripMenuItem, Me.CSVToolStripMenuItem})
         Me.ExportResultsToolStripMenuItem.Enabled = False
         Me.ExportResultsToolStripMenuItem.Name = "ExportResultsToolStripMenuItem"
-        Me.ExportResultsToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.ExportResultsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ExportResultsToolStripMenuItem.Text = "Export Results As..."
         '
         'PlainTextToolStripMenuItem
         '
         Me.PlainTextToolStripMenuItem.Name = "PlainTextToolStripMenuItem"
-        Me.PlainTextToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
+        Me.PlainTextToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.PlainTextToolStripMenuItem.Text = "Plain Text"
         '
         'CSVToolStripMenuItem
         '
         Me.CSVToolStripMenuItem.Name = "CSVToolStripMenuItem"
-        Me.CSVToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
+        Me.CSVToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.CSVToolStripMenuItem.Text = "CSV"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'AboutToolStripMenuItem
@@ -157,12 +160,29 @@ Partial Class Form1
         '
         'SplitContainer1.Panel2
         '
+        Me.SplitContainer1.Panel2.Controls.Add(Me.StatusStrip1)
         Me.SplitContainer1.Panel2.Controls.Add(Me.CircularProgressBar1)
         Me.SplitContainer1.Panel2.Controls.Add(Me.DataGridViewSearchResults)
         Me.SplitContainer1.Panel2MinSize = 200
         Me.SplitContainer1.Size = New System.Drawing.Size(860, 376)
         Me.SplitContainer1.SplitterDistance = 277
         Me.SplitContainer1.TabIndex = 6
+        '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 354)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(579, 22)
+        Me.StatusStrip1.TabIndex = 1
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'ToolStripStatusLabel1
+        '
+        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(16, 17)
+        Me.ToolStripStatusLabel1.Text = "..."
         '
         'CircularProgressBar1
         '
@@ -237,8 +257,11 @@ Partial Class Form1
         Me.MenuStrip1.PerformLayout()
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel2.ResumeLayout(False)
+        Me.SplitContainer1.Panel2.PerformLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -258,4 +281,6 @@ Partial Class Form1
     Friend WithEvents LabelResults As Label
     Friend WithEvents ClearResultsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TextBoxQuery As TextBox
+    Friend WithEvents StatusStrip1 As StatusStrip
+    Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
 End Class
