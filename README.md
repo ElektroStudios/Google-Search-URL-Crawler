@@ -41,7 +41,7 @@ winforms
     <a href="https://github.com/ElektroStudios/Google-Search-URL-Crawler/releases/latest"><img src="https://img.shields.io/github/v/release/ElektroStudios/Google-Search-URL-Crawler" alt="Latest Release"></a>
     <a href="https://learn.microsoft.com/en-us/dotnet/visual-basic/"><img src="https://img.shields.io/badge/language-VB.NET-purple.svg?logo=visualbasic" alt="Language"></a>
     <a href="https://learn.microsoft.com/en-us/windows/apps/"><img src="https://img.shields.io/badge/platform-Windows-lightgray.svg" alt="Platform"></a>
-    <a href="License"><img src="https://img.shields.io/github/license/ElektroStudios/Google-Search-URL-Crawler" alt="License"></a>
+    <a href="LICENSE"><img src="https://img.shields.io/github/license/ElektroStudios/Google-Search-URL-Crawler" alt="License"></a>
   <br>
     <a href="https://github.com/ElektroStudios/Google-Search-URL-Crawler/archive/refs/heads/main.zip"><img src="https://img.shields.io/github/repo-size/ElektroStudios/Google-Search-URL-Crawler" alt="Repo size"></a>
     <a href="https://somsubhra.github.io/github-release-stats/?username=ElektroStudios&repository=Google-Search-URL-Crawler"><img src="https://img.shields.io/github/downloads/ElektroStudios/Google-Search-URL-Crawler/total.svg?label=total%20downloads" alt="Total Downloads"></a>
