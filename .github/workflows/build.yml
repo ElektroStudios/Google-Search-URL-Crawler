@@ -4,7 +4,7 @@
 env:
   SOLUTION_NAME: "Google Search URL Crawler"
   SOLUTION_EXT:  "sln"
-  SONAR_PROJECT_KEY:  "ElektroStudios_PROJECT_NAME"
+  SONAR_PROJECT_KEY:  "ElektroStudios_Google-Search-URL-Crawler"
   SONAR_ORGANIZATION: "elektrostudios"
 # ------------------------------------------
 
