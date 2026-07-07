@@ -44,7 +44,7 @@ winforms
     <a href="https://learn.microsoft.com/en-us/windows/apps/"><img src="https://img.shields.io/badge/platform-Windows-lightgray.svg" alt="Platform"></a>
     <a href="LICENSE"><img src="https://img.shields.io/github/license/ElektroStudios/Google-Search-URL-Crawler" alt="License"></a>
   <br>
-    <a href="https://github.com/ElektroStudios/Google-Search-URL-Crawler/archive/refs/heads/main.zip"><img src="https://img.shields.io/github/repo-size/ElektroStudios/Google-Search-URL-Crawler" alt="Repo size"></a>
+    <a href="https://api.github.com/repos/ElektroStudios/Google-Search-URL-Crawler/zipball"><img src="https://img.shields.io/github/repo-size/ElektroStudios/Google-Search-URL-Crawler" alt="Repo size"></a>
     <a href="https://somsubhra.github.io/github-release-stats/?username=ElektroStudios&repository=Google-Search-URL-Crawler"><img src="https://img.shields.io/github/downloads/ElektroStudios/Google-Search-URL-Crawler/total.svg?label=total%20downloads" alt="Total Downloads"></a>
     <a href="https://github.com/ElektroStudios/Google-Search-URL-Crawler/commits"><img src="https://img.shields.io/github/last-commit/ElektroStudios/Google-Search-URL-Crawler" alt="Last commit"></a>
     <a href="https://github.com/ElektroStudios/Google-Search-URL-Crawler/pulls"><img src="https://img.shields.io/github/issues-pr/ElektroStudios/Google-Search-URL-Crawler" alt="Pull Requests"></a>
