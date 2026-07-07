@@ -1,4 +1,4 @@
-						          WinForm Animation Library
+﻿						          WinForm Animation Library
 		    A simple library for animating controls/values in .Net
         WinForm (.Net 3.5 and later). 
 

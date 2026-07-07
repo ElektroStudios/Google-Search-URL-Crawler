@@ -1,4 +1,4 @@
-					  Circular Progress Bar
+﻿					  Circular Progress Bar
  Circular ProgressBar is a custom control for WinForm with animation
 
 =====================================================================

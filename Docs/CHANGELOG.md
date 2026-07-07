@@ -1,4 +1,4 @@
-# Google Search URL Crawler Change Log 📋
+﻿# Google Search URL Crawler Change Log 📋
 
 ## v1.1 (2024) *(current)* 🆕
 
